@@ -1,3 +1,15 @@
+
+## The Author of this is Moises Santiago SOC Analyst.
+## 
+import sublime
+import sublime_plugin
+import json
+import re
+from datetime import datetime
+import string
+
+
+
 def beautify_leef(input_text: str) -> str:
     # Split the input text into parts using "|" as a delimiter.
     parts = input_text.split("|", maxsplit=5)
@@ -58,17 +70,7 @@ def parse_and_format_xml(xml, indent=''):
 
     return formatted_xml.strip()
 
-import sublime
-import sublime_plugin
-import json
-import re
-import base64
-from datetime import datetime
-import string
 
-
-## The Author of this is Moises Santiago SOC Analyst.
-## 
 
 class MagicDecoderCommand(sublime_plugin.TextCommand):
 
