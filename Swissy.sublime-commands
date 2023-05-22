@@ -1,14 +1,14 @@
 [
   {
-    "caption": "BTFJSON",
+    "caption": "Beautify Log",
     "command": "beautify_log"
   },
   {
-    "caption": "magicxx",
+    "caption": "Decode B64",
     "command": "magic_decoder"
   },
   {
-    "caption": "Convert to Human Readable",
+    "caption": "Convert to Human Readable Time",
     "command": "convert_to_human_readable"
   }
 ]
