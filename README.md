@@ -1,6 +1,6 @@
 # Swissy: The Swiss Army Knife for Cybersecurity in Sublime Text
 
-Swissy is a Sublime Text plugin that provides several handy commands and tools for cybersecurity professionals within the Sublime Text editor. It aims to make your life easier by offering various features such as decoding base64 strings, making timestamps more human-readable, and beautifying log files.
+Swissy is a Sublime Text plugin that provides several handy commands and tools for cybersecurity professionals within the Sublime Text editor. It's designed to make your life easier by offering various features such as decoding base64 strings, making timestamps more human-readable, and beautifying log files.
 
 ## Features
 
@@ -57,4 +57,14 @@ To use Swissy in Sublime Text, you can add the following commands to your comman
 
 Swissy may not be able to handle some corner cases, e.g., malformed base64 or JSON data. Moreover, it currently supports LEEF log and XML beautification, but other log formats might not be supported. Future development may provide support for additional formats and improved error handling.
 
-Feel free to provide feedback or suggest new features you'd like to see in Swissy to help make it even more helpful for cybersecurity professionals!
+## Disclaimer
+
+We are not responsible for any issues that may arise from the use of Swissy. The plugin is provided "as is" without any guarantees or warranties. By using Swissy, you acknowledge that we have no control over, and assume no responsibility for, any damage or loss resulting from the use of this plugin.
+
+We do not, in any way, store, modify, or transmit your data for any purposes other than providing the intended functionality of the tool within Sublime Text. It is solely your responsibility to ensure that the data you work with is handled securely and in compliance with any applicable laws and regulations.
+
+Please use Swissy responsibly and consider any security implications when working with sensitive data or log files.
+
+## Feedback and Contributions
+
+Feel free to provide feedback or suggest new features you'd like to see in Swissy to help make it even more helpful for cybersecurity professionals! We welcome contributions and improvements from the community.
