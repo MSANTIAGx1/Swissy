@@ -1,10 +1,10 @@
 [
   {
-    "caption": "Beautify Log",
+    "caption": "Beautify Logs",
     "command": "beautify_log"
   },
   {
-    "caption": "Decode B64",
+    "caption": "Decode highlighted text",
     "command": "magic_decoder"
   },
   {

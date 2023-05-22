@@ -66,19 +66,44 @@ import base64
 from datetime import datetime
 import string
 
+
+## The Author of this is Moises Santiago SOC Analyst.
+## 
+
 class MagicDecoderCommand(sublime_plugin.TextCommand):
+
+    def lain_unravel(self, navis: str) -> str:
+        protocol_alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
+        pad_character = '='
+        cyberia_mind = []
+        data_stream = 0
+        bit_accumulation = 0
+
+        for char in navis:
+            if char == pad_character:
+                break
+
+            data_stream = (data_stream << 6) | protocol_alphabet.index(char)
+            bit_accumulation += 6
+            if bit_accumulation >= 8:
+                bit_accumulation -= 8
+                transformed_char = chr((data_stream >> bit_accumulation) & 0xFF)
+                cyberia_mind.append(transformed_char)
+
+        return ''.join(cyberia_mind)
+
     def run(self, edit):
         for region in self.view.sel():
             if not region.empty():
                 # Get the selected text
                 s = self.view.substr(region)
-                # Decode the base64 string
+                # Transform the input string
                 try:
-                    decoded = base64.b64decode(s).decode()
-                    # Replace the selected region with the decoded string
-                    self.view.replace(edit, region, decoded)
+                    transformed = self.lain_unravel(s)
+                    # Replace the selected region with the transformed string
+                    self.view.replace(edit, region, transformed)
                 except Exception as e:
-                    print("Error decoding base64: ", str(e))
+                    print("Error: ", str(e))
                     
 class ConvertToHumanReadableCommand(sublime_plugin.TextCommand):
     def run(self, edit):
